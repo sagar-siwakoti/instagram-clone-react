@@ -3,7 +3,7 @@ import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import "./App.css";
 import Post from "./Post";
-import { db } from "./firebase";
+import { db,auth } from "./firebase";
 import Button from "@material-ui/core/Button";
 import Input from "@material-ui/core/Input";
 
@@ -54,18 +54,26 @@ function App() {
     });
   }, []);
 
-  const signUp = (event) => {};
+  const signUp = (event) => {
+    event.preventDefault();
+
+   //calling authentication to firebase
+    auth.createUserWithEmailAndPassword(email,password)
+        .catch((error)=>alert(error.message));
+  };
 
   return (
     <div className="app">
       <Modal open={open} onClose={() => setOpen(false)}>
         <div style={modalStyle} className={classes.paper}>
+          <form className="app__signup">
           <center>
             <img
               className="app__headerImage"
               src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
               alt=""
             />
+          </center>
             <Input
               type="text"
               placeholder="username"
@@ -86,7 +94,7 @@ function App() {
             />
             <Button onClick={signUp}>Sign Up</Button>
 
-          </center>
+          </form>
         </div>
       </Modal>
 
