@@ -96,7 +96,12 @@ function App() {
 
   return (
     <div className="app">
-    <ImageUpload/>
+      {/*only allow user who are logged in to to upload image*/}
+      {user?.displayName ? (
+        <ImageUpload username={user.displayName} />
+      ) : (
+        <h3>Please Log In to upload the image.</h3>
+      )}
       {/*==================SIGN UP================*/}
       <Modal open={open} onClose={() => setOpen(false)}>
         <div style={modalStyle} className={classes.paper}>
