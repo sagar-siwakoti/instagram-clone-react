@@ -1,11 +1,11 @@
 .imageUpload {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  width: 430px;
-  margin: 10px auto ;
+  /*align-items: flex-start;*/
+  width: 60%;
+  margin:10px auto 10px auto;
 }
 
-.imageupload_progress {
+.imageupload__progress {
   width: 100%;
 }

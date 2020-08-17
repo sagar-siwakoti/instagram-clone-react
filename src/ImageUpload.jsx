@@ -62,7 +62,7 @@ function ImageUpload({ username }) {
             />
             <input type='file' onChange={handleChange} />
             <Button onClick={handleUpload}>Upload</Button>
-            <progress  value={progress} max='100' />
+            <progress className="imageupload__progress" value={progress} max='100' />
         </div>
     );
 }
