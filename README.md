@@ -1,6 +1,6 @@
 This application is a simple clone of Instagram built with React and Firebase as backend and hosting.<br/>
-You can checkout the app here:https://instagram-clone-94df0.web.app/<br/>
-(Sign Up to post image and comment )
+You can checkout the app here: (Sign Up to post image and comment )https://instagram-clone-94df0.web.app/<br/>
+
 To run this app in your local machine (as localhost://):<br/>
 Steps:<br/>
 1.Clone the repo from github.<br/>
